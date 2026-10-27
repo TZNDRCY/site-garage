@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demande de devis – Turbo Garage Drancy</title>
+<meta name="description" content="Demandez un devis gratuit au Turbo Garage à Drancy : remplissez le formulaire, on vous rappelle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Turbo<b>Garage</b></a>
+    <a class="btn" href="index.html">← Retour</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" id="contenu">
+    <h1>Demandez votre <span>devis gratuit</span></h1>
+    <p class="intro">Quelques infos sur votre véhicule et votre besoin : on vous rappelle avec un prix clair avant tout travail.</p>
+
+    <form id="formulaire" novalidate>
+      <div class="rang">
+        <div>
+          <label for="nom">Nom et prénom</label>
+          <input id="nom" name="nom" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+      </div>
+
+      <div>
+        <label for="email">E-mail <small>(facultatif)</small></label>
+        <input id="email" name="email" type="email" autocomplete="email">
+      </div>
+
+      <div class="rang">
+        <div>
+          <label for="vehicule">Marque et modèle</label>
+          <input id="vehicule" name="vehicule" type="text" placeholder="Ex. Peugeot 208" required>
+        </div>
+        <div>
+          <label for="immat">Immatriculation <small>(facultatif)</small></label>
+          <input id="immat" name="immat" type="text" placeholder="AB-123-CD">
+        </div>
+      </div>
+
+      <div>
+        <label for="service">Service souhaité</label>
+        <select id="service" name="service" required>
+          <option value="">Choisissez…</option>
+          <option>Vidange + filtre à huile</option>
+          <option>Freins</option>
+          <option>Pneus</option>
+          <option>Diagnostic électronique</option>
+          <option>Climatisation</option>
+          <option>Batterie</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Votre message <small>(facultatif)</small></label>
+        <textarea id="message" name="message" placeholder="Décrivez le problème ou ce que vous souhaitez faire."></textarea>
+      </div>
+
+      <div class="accord">
+        <input id="accord" name="accord" type="checkbox" required>
+        <label for="accord">J'accepte d'être rappelé au sujet de ma demande.</label>
+      </div>
+
+      <button class="btn plein" type="submit">Demander mon devis</button>
+    </form>
+
+    <div class="merci" role="status" aria-live="polite" tabindex="-1" id="merci">
+      <h2>Demande reçue !</h2>
+      <p>Merci <strong id="prenom"></strong>, on vous rappelle très vite.</p>
+      <a class="btn" href="index.html">Retour au site</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Créé par Tarzan, © 2026 Tous droits réservés</p>
+</footer>
+
+<style>
+
+  :root { 
+  --fond:#070b14; 
+  --panneau:rgba(255,255,255,.04); 
+    --trait:rgba(255,255,255,.14); 
+    --texte:#e8ecf5; 
+    --gris:#8d96ab; 
+    --accent:#00d4ff; 
+    --accent2:#7a5cff; 
+    --erreur:#ff5d6c; 
+  }
+  * { 
+    box-sizing:border-box; 
+    margin:0; 
+    padding:0; 
+  }
+
+  body { 
+    background:var(--fond); 
+    color:var(--texte); 
+    font-family:"Chakra Petch",system-ui,sans-serif; 
+    line-height:1.6; overflow-x:hidden; 
+    min-height:100vh; 
+    display:flex; 
+    flex-direction:column; 
+  }
+ 
+  a { color:inherit; }
+ 
+  :focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+ 
+  .wrap { max-width:720px; margin:0 auto; padding:0 20px; width:100%; }
+ 
+  h1,h2 { font-family:"Orbitron",Impact,sans-serif; font-weight:900; text-transform:uppercase; font-style:italic; }
+
+  header { position:sticky; top:0; z-index:10; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); background:rgba(7,11,20,.7); border-bottom:1px solid var(--trait); }
+ 
+  header .wrap { max-width:1100px; display:flex; justify-content:space-between; align-items:center; gap:12px; padding-top:12px; padding-bottom:12px; }
+ 
+  .logo { font-family:"Orbitron",sans-serif; font-weight:900; font-size:1.1rem; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; font-style:italic; }
+ 
+  .logo b { color:var(--accent); }
+
+
+  .btn { display:inline-block; padding:12px 26px; border:1px solid var(--accent); color:var(--accent); background:transparent; font:inherit; font-weight:600; text-decoration:none; text-align:center; text-transform:uppercase; letter-spacing:.06em; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;
+    clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%); }
+ 
+    .btn:hover { background:var(--accent); color:var(--fond); box-shadow:0 0 30px var(--accent); }
+ 
+    .btn.plein { background:var(--accent); color:var(--fond); }
+ 
+    .btn.plein:hover { background:transparent; color:var(--accent); }
+
+ 
+    main { flex:1; position:relative; isolation:isolate; padding:56px 0 72px; }
+ 
+    main::before { content:""; position:absolute; right:-10%; top:-5%; width:520px; height:520px; z-index:-1; background:radial-gradient(circle, rgba(122,92,255,.3), rgba(0,212,255,.1) 45%, transparent 70%); filter:blur(20px); }
+ 
+    h1 { font-size:clamp(1.8rem,7vw,3rem); line-height:1.05; margin-bottom:10px; }
+ 
+    h1 span { background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+ 
+    .intro { color:#c3cadb; margin-bottom:30px; }
+
+ 
+    form { padding:28px; background:var(--panneau); border:1px solid var(--trait); display:grid; gap:18px; }
+ 
+    .rang { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr)); gap:18px; }
+ 
+    label { display:block; font-weight:600; margin-bottom:6px; font-size:.95rem; font-family:"Unica One",sans-serif; }
+ 
+ 
+    label small { color:var(--gris); font-weight:400; }
+
+    input, select, textarea { width:100%; padding:12px 14px; background:rgba(255,255,255,.06); border:1px solid var(--trait); color:var(--texte); font:inherit; border-radius:0; }
+ 
+    select option { background:#0b1222; color:var(--texte); }
+ 
+    textarea { min-height:120px; resize:vertical; }
+  
+    input:focus, select:focus, textarea:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(0,212,255,.25); }
+ 
+    input:user-invalid, select:user-invalid { border-color:var(--erreur); }
+ 
+    .accord { display:flex; gap:10px; align-items:flex-start; font-size:.9rem; color:var(--gris); }
+ 
+    .accord input { width:auto; margin-top:5px; accent-color:var(--accent); }
+ 
+    .accord label { font-weight:400; margin:0; font-size:.9rem; }
+  
+    form .btn { justify-self:start; padding:14px 40px; }
+
+ 
+    .merci { display:none; padding:28px; border:1px solid var(--accent); background:rgba(0,212,255,.08); }
+  
+    .merci h2 { font-size:1.4rem; margin-bottom:8px; color:var(--accent); }
+ 
+    .merci .btn { margin-top:18px; }
+ 
+    .envoye form { display:none; }
+  
+    .envoye .merci { display:block; }
+
+
+    footer { padding:28px 24px; text-align:center; color:var(--gris); font-size:.9rem; border-top:1px solid var(--trait); }
+
+    footer p + p { margin-top:6px; }
+
+</style>
+
+<script>
+  var f = document.getElementById('formulaire');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!f.checkValidity()) { f.reportValidity(); return; }
+    document.getElementById('prenom').textContent = f.nom.value.trim().split(' ')[0];
+    document.getElementById('contenu').classList.add('envoye');
+    var m = document.getElementById('merci'); m.focus(); window.scrollTo({top:0});
+  });
+</script>
+
+</body>
+</html>
