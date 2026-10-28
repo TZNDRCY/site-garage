@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turbo Garage – Garage automobile à Drancy</title>
+<meta name="description" content="Vidange, freins, pneus, diagnostic électronique et climatisation à Drancy. Devis gratuit par téléphone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Turbo<b>Garage</b></a>
+    <nav>
+      <a class="lien" href="service.html">Services</a>
+      <a class="lien" href="devis.html">Demander un devis</a>
+      <a class="lien" href="contact.html">Informations</a>
+      <a class="btn" href="tel:+33142454378">Appeler</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Services et <span class="hl">tarifs</span></h1>
+    <p>Le prix affiché est le prix de départ. Le devis exact est gratuit et vous le validez avant que l'on touche à votre voiture.</p>
+  </section>
+
+  <section class="group">
+    <h2>Entretien</h2>
+    <div class="row"><div><h3>Vidange et filtre à huile</h3><p>Huile adaptée à votre moteur, contrôle des niveaux.</p></div><div class="price"><small>dès</small>79 €</div></div>
+    <div class="row"><div><h3>Révision complète</h3><p>Vidange, filtres, 30 points de contrôle.</p></div><div class="price"><small>dès</small>149 €</div></div>
+    <div class="row"><div><h3>Filtres à air et d'habitacle</h3><p>Remplacement des deux filtres.</p></div><div class="price"><small>dès</small>39 €</div></div>
+  </section>
+
+  <section class="group">
+    <h2>Freinage</h2>
+    <div class="row"><div><h3>Plaquettes avant</h3><p>Pose et contrôle du système de freinage.</p></div><div class="price"><small>dès</small>89 €</div></div>
+    <div class="row"><div><h3>Disques et plaquettes avant</h3><p>Remplacement complet de l'essieu avant.</p></div><div class="price"><small>dès</small>229 €</div></div>
+    <div class="row"><div><h3>Liquide de frein</h3><p>Purge et remplacement.</p></div><div class="price"><small>dès</small>59 €</div></div>
+  </section>
+
+  <section class="group">
+    <h2>Pneus et trains roulants</h2>
+    <div class="row"><div><h3>Montage et équilibrage (4 roues)</h3><p>Hors prix des pneus.</p></div><div class="price"><small>dès</small>60 €</div></div>
+    <div class="row"><div><h3>Géométrie et parallélisme</h3><p>Réglage pour une conduite droite et une usure régulière.</p></div><div class="price"><small>dès</small>79 €</div></div>
+  </section>
+
+  <section class="group">
+    <h2>Diagnostic</h2>
+    <div class="row"><div><h3>Diagnostic électronique</h3><p>Lecture des codes défaut et rapport écrit.</p></div><div class="price"><small>dès</small>45 €</div></div>
+    <div class="row"><div><h3>Recharge de climatisation</h3><p>Contrôle d'étanchéité inclus.</p></div><div class="price"><small>dès</small>89 €</div></div>
+    <div class="row"><div><h3>Pré-contrôle technique</h3><p>On vérifie les points du contrôle avant votre passage.</p></div><div class="price"><small>dès</small>39 €</div></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Créé par Tarzan, © 2026 Tous droits réservés</p>
+</footer>
+
+    <style>
+
+     @import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Science+Gothic:wght@100..900&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Science+Gothic:wght@100..900&family=Unica+One&family=Zen+Dots&display=swap');
+
+:root{
+    --fond:#0e0d0d;
+    --panneau:rgba(102,81,81,0);
+    --trait:rgba(255,255,255,.14);
+    --texte:#ffffff;
+    --gris:#81899b;
+    --accent:#23aadf;
+    --accent2:#1084f0;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:72px;
+}
+
+body{
+    background:var(--fond);
+    color:var(--texte);
+    font-family:"Chakra Petch",system-ui,sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+}
+
+:focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:3px;
+}
+
+.wrap{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 20px;
+    position:relative;
+    font-family:"Unica One";
+}
+
+h1,h2,h3,.titre{
+    font-family:"Orbitron",Impact,sans-serif;
+    font-weight:1200;
+    text-transform:uppercase;
+}
+
+
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    background:rgba(7,11,20,.7);
+    border-bottom:1px solid var(--trait);
+}
+
+header .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    padding-top:12px;
+    padding-bottom:12px;
+}
+
+.logo{
+    font-family:"Orbitron",sans-serif;
+    font-weight:900;
+    font-size:1.1rem;
+    letter-spacing:.08em;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-style:italic;
+}
+
+.logo b{
+    color:var(--accent);
+}
+
+nav{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+nav a.lien{
+    text-decoration:none;
+    color:var(--gris);
+    transition:color .2s;
+}
+
+nav a.lien:hover{
+    color:var(--accent);
+}
+
+@media (max-width:640px){
+    nav a.lien{
+        display:none;
+    }
+}
+
+.btn { 
+        display:inline-block; 
+        padding:12px 26px; 
+        border:1px solid var(--accent); 
+        color:var(--accent); 
+        font-weight:600; 
+        text-decoration:none; 
+        text-align:center; 
+        text-transform:uppercase; 
+        letter-spacing:.06em; 
+        transition:background .2s, color .2s, box-shadow .2s;
+        clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%); 
+      }
+
+      .btn:hover { 
+        background:var(--accent); 
+        color:var(--fond); 
+        box-shadow:0 0 30px var(--accent); 
+      }
+
+      .btn.plein  { 
+        background:var(--accent); 
+        color:var(--fond); 
+      }
+
+      .btn.plein:hover { 
+        background:transparent; 
+        color:var(--accent); 
+      }
+
+
+footer{
+    padding:32px 24px;
+    text-align:center;
+    color:var(--gris);
+    font-size:.9rem;
+    border-top:1px solid var(--trait);
+}
+
+footer p + p{
+    margin-top:6px;
+}
+
+.t1{
+    font-family:"Zen Dots",sans-serif;
+}
+
+
+main {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+
+.intro {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 3rem;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-style: italic;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  line-height: 1.05;
+  margin-bottom: 1.1rem;
+}
+
+h1 .hl {
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent2)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.intro p {
+  color: var(--gris);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.05rem;
+}
+
+
+.group {
+  margin-top: 2.5rem;
+}
+
+.group h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: var(--accent2);
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--trait);
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem .9rem;
+  border-bottom: 1px solid var(--trait);
+  border-left: 3px solid transparent;
+  transition: background .2s, border-color .2s;
+}
+
+.row:hover {
+  background: rgba(255,255,255,.04);
+  border-left-color: var(--accent);
+}
+
+.row h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+}
+
+.row p {
+  color: var(--gris);
+  font-size: .92rem;
+  font-family: "Manrope", sans-serif;
+}
+
+
+.price {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--accent2);
+  white-space: nowrap;
+}
+
+.price small {
+  font-weight: 500;
+  font-size: .8rem;
+  color: var(--gris);
+  margin-right: .3rem;
+}
+
+
+.note {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--gris);
+  font-size: .9rem;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Boutons */
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: .85rem 1.6rem;
+  border-radius: .5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: .02em;
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 0 22px #23aadf;
+  transition: transform .15s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 34px rgba(224, 226, 226, 0.7);
+}
+
+.btn.alt {
+  background: transparent;
+  border: 1px solid var(--accent);
+  box-shadow: none;
+  color: var(--texte);
+}
+
+
+@media (max-width: 720px) {
+  .row {
+    flex-direction: column;
+    gap: .35rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+    </style>
+
+</body>
+</html>

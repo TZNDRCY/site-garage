@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact et accès – Turbo Garage Drancy</title>
+<meta name="description" content="Adresse, horaires et téléphone du Turbo Garage à Drancy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Unica+One&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Turbo<b>Garage</b></a>
+    <nav>
+      <a class="lien" href="service.html">Services</a>
+      <a class="lien" href="devis.html">Demander un devis</a>
+      <a class="lien" href="contact.html">Informations</a>
+      <a class="btn" href="tel:+33142454378">Appeler</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Venez nous <span class="hl">rencontrer</span></h1>
+    <p>Passez à l'atelier ou appelez-nous : on répond vite.</p>
+    <div class="status" id="status"><span class="dot"></span><span id="status-text">Horaires en cours de chargement</span></div>
+  </section>
+
+  <div class="cols">
+    <section class="card">
+      <h2>Coordonnées</h2> <br>
+      <p><strong>Turbo Garage</strong></p> 
+       <p> 222 avenue Jean Jaurès<br>93700 Drancy </p> <br>
+      <p>Téléphone : <a href="tel:+33123456789"><strong>01 23 45 67 89</strong></a></p> <br>
+      <p>E-mail : <a href="mailto:contact@turbogarage.example">contact@turbogarage.example</a></p> <br>
+      <div class="btns" style="margin-top:1.25rem">
+        <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=12+avenue+Jean+Jaur%C3%A8s+93700+Drancy" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Horaires</h2>
+      <ul class="hours" id="hours">
+        <li data-day="1" data-ranges="8.5-12.5,14-18.5"><span>Lundi</span><span>8h30–12h30 · 14h–18h30</span></li>
+        <li data-day="2" data-ranges="8.5-12.5,14-18.5"><span>Mardi</span><span>8h30–12h30 · 14h–18h30</span></li>
+        <li data-day="3" data-ranges="8.5-12.5,14-18.5"><span>Mercredi</span><span>8h30–12h30 · 14h–18h30</span></li>
+        <li data-day="4" data-ranges="8.5-12.5,14-18.5"><span>Jeudi</span><span>8h30–12h30 · 14h–18h30</span></li>
+        <li data-day="5" data-ranges="8.5-12.5,14-18.5"><span>Vendredi</span><span>8h30–12h30 · 14h–18h30</span></li>
+        <li data-day="6" data-ranges="9-13"><span>Samedi</span><span>9h–13h</span></li>
+        <li data-day="0" data-ranges=""><span>Dimanche</span><span>Fermé</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <iframe title="Carte de Drancy" loading="lazy"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=2.425%2C48.913%2C2.466%2C48.934&amp;layer=mapnik"></iframe>
+
+<br>
+<br>
+
+<footer>
+   <p>Créé par Tarzan, © 2026 Tous droits réservés</p>
+</footer>
+
+<style>
+  :root {
+  --fond: #0e0d0d;
+  --panneau: rgba(102, 81, 81, 0);
+  --trait: rgba(255,255,255,.14);
+  --texte: #ffffff;
+  --gris: #81899b;
+  --accent: #23aadf;
+  --accent2: #7a5cff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  background: var(--fond);
+  color: var(--texte);
+  font-family: "Chakra Petch", system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Header identique à l'accueil */
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.logo b {
+  color: var(--accent);
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  font-family: "Unica One", sans-serif;
+}
+
+h1, h2, h3, .titre {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7,11,20,.7);
+  border-bottom: 1px solid var(--trait);
+}
+
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+nav a.lien {
+  text-decoration: none;
+  color: var(--gris);
+  transition: color .2s;
+}
+
+nav a.lien:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  nav a.lien { display: none; }
+}
+
+
+main {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 4.5rem 20px 5rem;
+}
+
+
+.intro {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 3rem;
+}
+h1 {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-style: italic;
+  line-height: 1.05;
+  margin-bottom: 1.1rem;
+}
+h1 .hl {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.intro p {
+  color: var(--gris);
+  font-family: "Chakra Petch", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: .85rem 1.6rem;
+  border-radius: .5rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 22px rgba(35,170,223,.45);
+  transition: transform .15s, box-shadow .2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 34px rgba(35,170,223,.7);
+}
+.btn.alt {
+  background: transparent;
+  border: 1px solid var(--accent);
+  box-shadow: none;
+  color: var(--texte);
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  margin-top: 2.5rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .45rem .9rem;
+  border: 1px solid var(--trait);
+  border-radius: 2rem;
+  background: rgba(255,255,255,.04);
+  margin: 1.25rem auto 0;
+  font-weight: 600;
+  font-family: "Chakra Petch", sans-serif;
+  width: fit-content;
+}
+.dot {
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background: #e0524d;
+}
+.status.open .dot {
+  background: #2ee59d;
+  box-shadow: 0 0 10px #2ee59d;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  max-width: 63.36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--trait);
+  border-radius: .75rem;
+  padding: 1.5rem;
+  font-family: "Chakra Petch", sans-serif;
+  text-align: center
+}
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--accent2);
+}
+.card p {
+  margin-bottom: .5rem;
+}
+.hours {
+  list-style: none;
+}
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .55rem .6rem;
+  border-bottom: 1px solid var(--trait);
+}
+.hours li:last-child {
+  border-bottom: 0;
+}
+.hours li.today {
+  background: rgba(35,170,223,.16);
+  border-radius: .4rem;
+  font-weight: 700;
+}
+.hours span:last-child {
+  color: var(--gris);
+}
+.hours li.today span:last-child {
+  color: var(--texte);
+}
+
+iframe {
+  display: block;
+  max-width: 63.36rem;
+  width: 100%;
+  margin: 2rem auto 0;
+  height: 20rem;
+  border: 0;
+  border-radius: .75rem;
+  filter: invert(.92) hue-rotate(180deg) saturate(.6);
+}
+
+footer { 
+          padding:32px 24px; 
+          text-align:center; 
+          color:var(--gris); 
+          font-size:.9rem; 
+          border-top:1px solid var(--trait); 
+        }
+   
+        footer p + p { margin-top:6px; }
+
+@media (max-width: 720px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+
+<script>
+(function () {
+  var now = new Date();
+  var day = now.getDay();
+  var hour = now.getHours() + now.getMinutes() / 60;
+  var open = false;
+  document.querySelectorAll("#hours li").forEach(function (li) {
+    if (Number(li.dataset.day) !== day) return;
+    li.classList.add("today");
+    var r = li.dataset.ranges;
+    if (!r) return;
+    r.split(",").forEach(function (p) {
+      var a = p.split("-").map(Number);
+      if (hour >= a[0] && hour < a[1]) open = true;
+    });
+  });
+  var s = document.getElementById("status");
+  s.classList.toggle("open", open);
+  document.getElementById("status-text").textContent = open ? "Ouvert maintenant" : "Fermé actuellement";
+})();
+</script>
+</body>
+</html>
